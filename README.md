@@ -8,4 +8,4 @@ Data : Mobile Price Classification "https://www.kaggle.com/search?q=mobile+price
 
 Classifier Used : Random Forest.
 
-Gridsearch Explanation: " "
+Gridsearch Explanation: " https://www.linkedin.com/posts/junaid-ahmed-3a3258128_ai-ml-hyperparamteroptimization-activity-6692464814876450816-1Kyu"
