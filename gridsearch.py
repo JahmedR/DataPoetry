@@ -1,3 +1,4 @@
+#importing libraries
 import pandas as pd 
 import numpy as np
 
@@ -11,7 +12,7 @@ if __name__ == "__main__":
   X = df.drop("price_range", axis=1).values
   Y = df.price_range.values
   
-  
+  #defining classifier model
   clf = ensemble.RandomForestClassifier(n_jobs = -1)
   
   param_grid = { 
@@ -20,6 +21,7 @@ if __name__ == "__main__":
                 "criterion" : ["gini", "entropy"]
                }
                
+  #starting the hyper parameter optimization              
   model = model_selection.GridsearchCV(
                                         estimator = clf,
                                         param_grid = param_grid,
@@ -28,7 +30,7 @@ if __name__ == "__main__":
                                         n_jobs = 1
                                         cv = 5
                                        )
-                                       
+  #traing the model                                     
   model.fit(X,Y)
   print(model.best_score)
   print(model.best_estimator_.get_params())
